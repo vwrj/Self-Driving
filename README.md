@@ -1,2 +1,2 @@
 # Self-Driving
-Yandhi. Learning a mapping from six car-mounted camera angles to bird's-eye view. 
+We utilize a YOLO-inspired approach toward theprescribed vehicle detection and road map detec-tion tasks. We re-frame both tasks as classificationproblems and find that when trained in a multitaskfashion, the model gives good performance on theroad map task. 
