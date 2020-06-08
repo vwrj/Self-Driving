@@ -1,0 +1,128 @@
+
+Average Train Epoch Loss: 0.6851469650155022Average Train Map Loss: 0.6850590507189432Average Train Count Epoch Loss: 0.6938497537658328
+Average Validation Epoch Loss: 2.0589922483150778	Average Validation Map Epoch Loss: 2.0630275148611803	Average Validation Count Epoch Loss: 1.6594993838897119
+ best_val_loss so far: 2.0630275148611803
+Average Train Epoch Loss: 0.5576537394807453Average Train Map Loss: 0.557435591447921Average Train Count Epoch Loss: 0.5792499393224716
+Average Validation Epoch Loss: 0.45376163491835964	Average Validation Map Epoch Loss: 0.4534244927076193	Average Validation Count Epoch Loss: 0.48713806156928724
+ best_val_loss so far: 0.4534244927076193
+Average Train Epoch Loss: 0.33393163759083977Average Train Map Loss: 0.3334577874058769Average Train Count Epoch Loss: 0.38084251369748795
+Average Validation Epoch Loss: 0.20872959953088027	Average Validation Map Epoch Loss: 0.2081089231830377	Average Validation Count Epoch Loss: 0.27017655624793124
+ best_val_loss so far: 0.2081089231830377
+Average Train Epoch Loss: 0.16900459339930898Average Train Map Loss: 0.16834542595204852Average Train Count Epoch Loss: 0.2342620020820981
+Average Validation Epoch Loss: 0.15814268302458984	Average Validation Map Epoch Loss: 0.15740535924067864	Average Validation Count Epoch Loss: 0.23113762300748092
+ best_val_loss so far: 0.15740535924067864
+Average Train Epoch Loss: 0.09434641237769809Average Train Map Loss: 0.0935852706077553Average Train Count Epoch Loss: 0.16969937852450778
+Average Validation Epoch Loss: 0.0689047400194865	Average Validation Map Epoch Loss: 0.0681207409271827	Average Validation Count Epoch Loss: 0.1465206599006286
+ best_val_loss so far: 0.0681207409271827
+Average Train Epoch Loss: 0.061977807645286834Average Train Map Loss: 0.06116139542843614Average Train Count Epoch Loss: 0.14280256508361724
+Average Validation Epoch Loss: 0.05076277900773745	Average Validation Map Epoch Loss: 0.04993549963602653	Average Validation Count Epoch Loss: 0.13266336917877197
+ best_val_loss so far: 0.04993549963602653
+Average Train Epoch Loss: 0.04443068898149899Average Train Map Loss: 0.04356937684296142Average Train Count Epoch Loss: 0.12970055856165433
+Average Validation Epoch Loss: 0.0364550887965239	Average Validation Map Epoch Loss: 0.035606008381224595	Average Validation Count Epoch Loss: 0.12051403551147534
+ best_val_loss so far: 0.035606008381224595
+Average Train Epoch Loss: 0.03588156663768348Average Train Map Loss: 0.035002183426348935Average Train Count Epoch Loss: 0.12294047826102801
+Average Validation Epoch Loss: 0.03040358839699855	Average Validation Map Epoch Loss: 0.029536601944038503	Average Validation Count Epoch Loss: 0.11623519028608616
+ best_val_loss so far: 0.029536601944038503
+Average Train Epoch Loss: 0.03036637537713562Average Train Map Loss: 0.029471375704521224Average Train Count Epoch Loss: 0.11897131236536163
+Average Validation Epoch Loss: 0.02676894200535921	Average Validation Map Epoch Loss: 0.025893281643780377	Average Validation Count Epoch Loss: 0.11345929767076786
+ best_val_loss so far: 0.025893281643780377
+Average Train Epoch Loss: 0.027309247345796653Average Train Map Loss: 0.0264065721737487Average Train Count Epoch Loss: 0.11667406931519508
+Average Validation Epoch Loss: 0.024123581126332283	Average Validation Map Epoch Loss: 0.023248660378158092	Average Validation Count Epoch Loss: 0.11074069056373376
+ best_val_loss so far: 0.023248660378158092
+Average Train Epoch Loss: 0.02531323278588908Average Train Map Loss: 0.024403472812402818Average Train Count Epoch Loss: 0.11537944678039778
+Average Validation Epoch Loss: 0.02297992782237438	Average Validation Map Epoch Loss: 0.022096521937503263	Average Validation Count Epoch Loss: 0.11043709459213111
+ best_val_loss so far: 0.022096521937503263
+Average Train Epoch Loss: 0.023589649681179298Average Train Map Loss: 0.022683287651411126Average Train Count Epoch Loss: 0.11331947850329535
+Average Validation Epoch Loss: 0.02052754034789709	Average Validation Map Epoch Loss: 0.019640411644314345	Average Validation Count Epoch Loss: 0.10835329500528482
+ best_val_loss so far: 0.019640411644314345
+Average Train Epoch Loss: 0.022242517818120262Average Train Map Loss: 0.02134545486686485Average Train Count Epoch Loss: 0.11105173120186443
+Average Validation Epoch Loss: 0.019272929308219597	Average Validation Map Epoch Loss: 0.018417927257430095	Average Validation Count Epoch Loss: 0.1039181171128383
+ best_val_loss so far: 0.018417927257430095
+Average Train Epoch Loss: 0.021365514690322534Average Train Map Loss: 0.020477146114267056Average Train Count Epoch Loss: 0.10931399659741492
+Average Validation Epoch Loss: 0.017510939676028032	Average Validation Map Epoch Loss: 0.016655111219733953	Average Validation Count Epoch Loss: 0.10223794069427711
+ best_val_loss so far: 0.016655111219733953
+Average Train Epoch Loss: 0.02012411005617607Average Train Map Loss: 0.019247678303647608Average Train Count Epoch Loss: 0.10689084334742455
+Average Validation Epoch Loss: 0.028087639321501438	Average Validation Map Epoch Loss: 0.027223529759794474	Average Validation Count Epoch Loss: 0.11363440408156468
+Average Train Epoch Loss: 0.019005939169299036Average Train Map Loss: 0.018139897978731563Average Train Count Epoch Loss: 0.10474400243588856
+Average Validation Epoch Loss: 0.016815208435918275	Average Validation Map Epoch Loss: 0.015981940982433464	Average Validation Count Epoch Loss: 0.09930870567376797
+ best_val_loss so far: 0.015981940982433464
+Average Train Epoch Loss: 0.018104347351583696Average Train Map Loss: 0.017252257577187957Average Train Count Epoch Loss: 0.10246122468795095
+Average Validation Epoch Loss: 0.01566756792509785	Average Validation Map Epoch Loss: 0.014856170110691052	Average Validation Count Epoch Loss: 0.09599591992222346
+ best_val_loss so far: 0.014856170110691052
+Average Train Epoch Loss: 0.017406519200830233Average Train Map Loss: 0.016565903954740082Average Train Count Epoch Loss: 0.10062741548532532
+Average Validation Epoch Loss: 0.015393873784117974	Average Validation Map Epoch Loss: 0.014558203482570557	Average Validation Count Epoch Loss: 0.09812522880159892
+ best_val_loss so far: 0.014558203482570557
+Average Train Epoch Loss: 0.01693974124888579Average Train Map Loss: 0.016116946496601614Average Train Count Epoch Loss: 0.09839640841597602
+Average Validation Epoch Loss: 0.014767765139157955	Average Validation Map Epoch Loss: 0.01394098076539544	Average Validation Count Epoch Loss: 0.09661939912117444
+ best_val_loss so far: 0.01394098076539544
+Average Train Epoch Loss: 0.016617419748079208Average Train Map Loss: 0.015798161436049712Average Train Count Epoch Loss: 0.0977239778708844
+Average Validation Epoch Loss: 0.014457775530620264	Average Validation Map Epoch Loss: 0.013636447095240537	Average Validation Count Epoch Loss: 0.09576927641263375
+ best_val_loss so far: 0.013636447095240537
+Average Train Epoch Loss: 0.01604398562617245Average Train Map Loss: 0.015241831962373994Average Train Count Epoch Loss: 0.09545718804001808
+Average Validation Epoch Loss: 0.014198165745116197	Average Validation Map Epoch Loss: 0.013377950956615118	Average Validation Count Epoch Loss: 0.09539940695349987
+ best_val_loss so far: 0.013377950956615118
+Average Train Epoch Loss: 0.015586830529251269Average Train Map Loss: 0.014794838694589479Average Train Count Epoch Loss: 0.0939940101334027
+Average Validation Epoch Loss: 0.014286367151026543	Average Validation Map Epoch Loss: 0.013439004058734728	Average Validation Count Epoch Loss: 0.09817528867950806
+Average Train Epoch Loss: 0.015188571212014982Average Train Map Loss: 0.014400064736782086Average Train Count Epoch Loss: 0.09325070079593431
+Average Validation Epoch Loss: 0.014058040526623908	Average Validation Map Epoch Loss: 0.013225373417998735	Average Validation Count Epoch Loss: 0.09649206124819242
+ best_val_loss so far: 0.013225373417998735
+Average Train Epoch Loss: 0.014856084595833506Average Train Map Loss: 0.014068056691792749Average Train Count Epoch Loss: 0.09287083542772702
+Average Validation Epoch Loss: 0.01392395249926127	Average Validation Map Epoch Loss: 0.013109147978516726	Average Validation Count Epoch Loss: 0.09458959704408279
+ best_val_loss so far: 0.013109147978516726
+Average Train Epoch Loss: 0.01441155651672965Average Train Map Loss: 0.013630808630426015Average Train Count Epoch Loss: 0.0917055814393929
+Average Validation Epoch Loss: 0.013783240977388162	Average Validation Map Epoch Loss: 0.012960169141968856	Average Validation Count Epoch Loss: 0.09526733853496037
+ best_val_loss so far: 0.012960169141968856
+Average Train Epoch Loss: 0.014085956933420329Average Train Map Loss: 0.013305033663553852Average Train Count Epoch Loss: 0.09139734974929264
+Average Validation Epoch Loss: 0.014640968866073169	Average Validation Map Epoch Loss: 0.013773380062327934	Average Validation Count Epoch Loss: 0.100532254920556
+Average Train Epoch Loss: 0.013857764129837354Average Train Map Loss: 0.01308544852903911Average Train Count Epoch Loss: 0.09031699927789824
+Average Validation Epoch Loss: 0.013431384228169918	Average Validation Map Epoch Loss: 0.012570102520000476	Average Validation Count Epoch Loss: 0.09869827014895585
+ best_val_loss so far: 0.012570102520000476
+Average Train Epoch Loss: 0.013459199959678309Average Train Map Loss: 0.012698649096169643Average Train Count Epoch Loss: 0.08875372473682676
+Average Validation Epoch Loss: 0.01324558429993116	Average Validation Map Epoch Loss: 0.0123817736032204	Average Validation Count Epoch Loss: 0.09876283974601673
+ best_val_loss so far: 0.0123817736032204
+Average Train Epoch Loss: 0.013053208190415586Average Train Map Loss: 0.012299675807090743Average Train Count Epoch Loss: 0.0876529017374629
+Average Validation Epoch Loss: 0.013814526681716625	Average Validation Map Epoch Loss: 0.012942821718752384	Average Validation Count Epoch Loss: 0.10011329989020641
+Average Train Epoch Loss: 0.012761513247997278Average Train Map Loss: 0.012013782141730189Average Train Count Epoch Loss: 0.08678688364369529
+Average Validation Epoch Loss: 0.013133627702840246	Average Validation Map Epoch Loss: 0.012310064917143721	Average Validation Count Epoch Loss: 0.0946663308602113
+ best_val_loss so far: 0.012310064917143721
+Average Train Epoch Loss: 0.012652819377503224Average Train Map Loss: 0.011903522265631529Average Train Count Epoch Loss: 0.08683322327477591
+Average Validation Epoch Loss: 0.012610966733728465	Average Validation Map Epoch Loss: 0.011748241833769359	Average Validation Count Epoch Loss: 0.09802072982375439
+ best_val_loss so far: 0.011748241833769359
+Average Train Epoch Loss: 0.01222134954517796Average Train Map Loss: 0.011480379361836683Average Train Count Epoch Loss: 0.08557738871091888
+Average Validation Epoch Loss: 0.01262530806259467	Average Validation Map Epoch Loss: 0.011746252206369089	Average Validation Count Epoch Loss: 0.09965182439639018
+ best_val_loss so far: 0.011746252206369089
+Average Train Epoch Loss: 0.011916352908260056Average Train Map Loss: 0.011180149400163264Average Train Count Epoch Loss: 0.08480049297213554
+Average Validation Epoch Loss: 0.012670427847367067	Average Validation Map Epoch Loss: 0.011788646045785684	Average Validation Count Epoch Loss: 0.0999668211891101
+Average Train Epoch Loss: 0.01158618652927024Average Train Map Loss: 0.01085770165192939Average Train Count Epoch Loss: 0.08370618362511907
+Average Validation Epoch Loss: 0.01211597453444623	Average Validation Map Epoch Loss: 0.011295908336670926	Average Validation Count Epoch Loss: 0.09330251211157212
+ best_val_loss so far: 0.011295908336670926
+Average Train Epoch Loss: 0.011417195498056355Average Train Map Loss: 0.010689506701947678Average Train Count Epoch Loss: 0.08345837986895016
+Average Validation Epoch Loss: 0.012769782020208927	Average Validation Map Epoch Loss: 0.01188321839659833	Average Validation Count Epoch Loss: 0.1005395739697493
+Average Train Epoch Loss: 0.011101937666535378Average Train Map Loss: 0.010385985656951865Average Train Count Epoch Loss: 0.08198117879884584
+Average Validation Epoch Loss: 0.012339251527849298	Average Validation Map Epoch Loss: 0.01145665838311498	Average Validation Count Epoch Loss: 0.09971596558506672
+Average Train Epoch Loss: 0.010901357504051357Average Train Map Loss: 0.010195778654001298Average Train Count Epoch Loss: 0.08075365752336525
+Average Validation Epoch Loss: 0.012622897853501715	Average Validation Map Epoch Loss: 0.011735350018940292	Average Validation Count Epoch Loss: 0.10049012188728039
+Average Train Epoch Loss: 0.01062338906783788Average Train Map Loss: 0.009922837627874244Average Train Count Epoch Loss: 0.07997797635339556
+Average Validation Epoch Loss: 0.011830627577952467	Average Validation Map Epoch Loss: 0.010962684620888187	Average Validation Count Epoch Loss: 0.09775698156310962
+ best_val_loss so far: 0.010962684620888187
+Average Train Epoch Loss: 0.010404912083010589Average Train Map Loss: 0.009708072828306328Average Train Count Epoch Loss: 0.07939199299684592
+Average Validation Epoch Loss: 0.011843584012240171	Average Validation Map Epoch Loss: 0.01096533713504099	Average Validation Count Epoch Loss: 0.09879001516562241
+Average Train Epoch Loss: 0.010241991421207786Average Train Map Loss: 0.009554073048223342Average Train Count Epoch Loss: 0.07834590017085984
+Average Validation Epoch Loss: 0.012246528389648749	Average Validation Map Epoch Loss: 0.01133516556225144	Average Validation Count Epoch Loss: 0.10247144475579262
+Average Train Epoch Loss: 0.009979114765744833Average Train Map Loss: 0.009297066250638593Average Train Count Epoch Loss: 0.07750190776728448
+Average Validation Epoch Loss: 0.012492636755968515	Average Validation Map Epoch Loss: 0.01157190602344389	Average Validation Count Epoch Loss: 0.10364496163450755
+Average Train Epoch Loss: 0.010374080691309202Average Train Map Loss: 0.009676470221685511Average Train Count Epoch Loss: 0.07943751238996075
+Average Validation Epoch Loss: 0.011774897754478913	Average Validation Map Epoch Loss: 0.010902532000237932	Average Validation Count Epoch Loss: 0.09813910608108227
+ best_val_loss so far: 0.010902532000237932
+Average Train Epoch Loss: 0.010179984150454402Average Train Map Loss: 0.009491550753868762Average Train Count Epoch Loss: 0.07833488152495452
+Average Validation Epoch Loss: 0.011969669435459834	Average Validation Map Epoch Loss: 0.01109952425870758	Average Validation Count Epoch Loss: 0.09811403802954234
+Average Train Epoch Loss: 0.00992976494931749Average Train Map Loss: 0.009252580421577608Average Train Count Epoch Loss: 0.0769710213832912
+Average Validation Epoch Loss: 0.012493718594599228	Average Validation Map Epoch Loss: 0.011457292148127006	Average Validation Count Epoch Loss: 0.11509993901619545
+Average Train Epoch Loss: 0.009766493400647527Average Train Map Loss: 0.009093159202131487Average Train Count Epoch Loss: 0.07642657150115285
+Average Validation Epoch Loss: 0.01213601091876626	Average Validation Map Epoch Loss: 0.011236805056866545	Average Validation Count Epoch Loss: 0.10115738470966999
+Average Train Epoch Loss: 0.00945948532649449Average Train Map Loss: 0.008800043351948261Average Train Count Epoch Loss: 0.07474423160865193
+Average Validation Epoch Loss: 0.011842300148250965	Average Validation Map Epoch Loss: 0.01093071847795867	Average Validation Count Epoch Loss: 0.10208889154287484
+Average Train Epoch Loss: 0.009281699964776634Average Train Map Loss: 0.008627973995836717Average Train Count Epoch Loss: 0.0740005676590261
+Average Validation Epoch Loss: 0.01189153021774613	Average Validation Map Epoch Loss: 0.011017052564196862	Average Validation Count Epoch Loss: 0.09846481652213977
+Average Train Epoch Loss: 0.009085647347161458Average Train Map Loss: 0.008448717215408881Average Train Count Epoch Loss: 0.07214172512647651
+Average Validation Epoch Loss: 0.012102811131626368	Average Validation Map Epoch Loss: 0.011175773966197785	Average Validation Count Epoch Loss: 0.10387948155403137
