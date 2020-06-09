@@ -52,14 +52,14 @@ class ModelLoader():
             x.cuda()
             x.eval()
         
-    def get_bounding_boxes(self, samples):
+    def get_bounding_boxes(self, sample):
         
-        fl_vehicle, _ = fl_model(sample[0][0][:, 130:, :].unsqueeze(0))
-        f_vehicle, _ = f_model(sample[0][1][:, 130:, :].unsqueeze(0))
-        fr_vehicle, _ = fr_model(sample[0][2][:, 120:, :].unsqueeze(0))
-        bl_vehicle, _ = bl_model(sample[0][3][:, 130:, :].unsqueeze(0))
-        b_vehicle, _ = b_model(sample[0][4][:, 130:, :].unsqueeze(0))
-        br_vehicle, _ = br_model(sample[0][5][:, 120:, :].unsqueeze(0))
+        fl_vehicle, _ = self.fl_model(sample[0][0][:, 130:, :].unsqueeze(0))
+        f_vehicle, _ = self.f_model(sample[0][1][:, 130:, :].unsqueeze(0))
+        fr_vehicle, _ = self.fr_model(sample[0][2][:, 120:, :].unsqueeze(0))
+        bl_vehicle, _ = self.bl_model(sample[0][3][:, 130:, :].unsqueeze(0))
+        b_vehicle, _ = self.b_model(sample[0][4][:, 130:, :].unsqueeze(0))
+        br_vehicle, _ = self.br_model(sample[0][5][:, 120:, :].unsqueeze(0))
 
         fl_pred_map = torch.sigmoid(fl_vehicle[0])
         f_pred_map = torch.sigmoid(f_vehicle[0])
@@ -68,33 +68,70 @@ class ModelLoader():
         b_pred_map = torch.sigmoid(b_vehicle[0])
         br_pred_map = torch.sigmoid(br_vehicle[0])
 
-        reconstruct_fl_map = reconstruct_from_bins(fl_pred_map, 0.35).cpu()
-        reconstruct_f_map = reconstruct_from_bins(f_pred_map, 0.4).cpu()
-        reconstruct_fr_map = reconstruct_from_bins(fr_pred_map, 0.2).cpu()
-        reconstruct_bl_map = reconstruct_from_bins(bl_pred_map, 0.3).cpu()
-        reconstruct_b_map = reconstruct_from_bins(b_pred_map, 0.35).cpu()
-        reconstruct_br_map = reconstruct_from_bins(br_pred_map, 0.6).cpu()
+        reconstruct_fl_map = self.reconstruct_from_bins(fl_pred_map, 0.35).cpu()
+        reconstruct_f_map = self.reconstruct_from_bins(f_pred_map, 0.4).cpu()
+        reconstruct_fr_map = self.reconstruct_from_bins(fr_pred_map, 0.2).cpu()
+        reconstruct_bl_map = self.reconstruct_from_bins(bl_pred_map, 0.3).cpu()
+        reconstruct_b_map = self.reconstruct_from_bins(b_pred_map, 0.35).cpu()
+        reconstruct_br_map = self.reconstruct_from_bins(br_pred_map, 0.6).cpu()
 
         reconstruct_front_map = reconstruct_fl_map + reconstruct_f_map + reconstruct_fr_map
         reconstruct_back_map = reconstruct_bl_map + reconstruct_b_map + reconstruct_br_map
 
-        front_bboxes = get_bboxes(reconstruct_front_map)
-        back_bboxes = get_bboxes(reconstruct_back_map)
+        front_bboxes = self.get_bboxes(reconstruct_front_map)
+        back_bboxes = self.get_bboxes(reconstruct_back_map)
         combined_bboxes = front_bboxes + back_bboxes
 
         if len(combined_bboxes) == 0:
-            return tuple([])  
+            xs = torch.Tensor([200, 210, 210, 200])
+            ys = torch.Tensor([400, 400, 405, 405])
             
+            xs = xs - 400
+            ys = 800 - ys # right-side up
+            ys = ys - 400
+
+            xs /= 10.
+            ys /= 10.
+            
+            coords = torch.stack((xs, ys))
+            coords = [coords]
+            
+            coords = torch.stack(coords).double()
+            
+            return tuple([coords]) 
         
-        return tuple(combined_bboxes)
+        
+        bb_samples = []
+        bounding_boxes = []
+        for bb in combined_bboxes:
+            top_left, width, height = bb
+            r, c = top_left
+            xs = torch.Tensor([c, c+width, c+width, c])
+            ys = torch.Tensor([r, r, r+height, r+height])
+
+            xs = xs - 400
+            ys = 800 - ys # right-side up
+            ys = ys - 400
+
+            xs /= 10.
+            ys /= 10.
+
+            coords = torch.stack((xs, ys))
+            bounding_boxes.append(coords)
+
+        bounding_boxes = torch.stack(bounding_boxes).double()
+        bb_samples.append(bounding_boxes)
+        bb_samples = tuple(bb_samples)
+            
+        return bb_samples
         
         
     def reconstruct_from_bins(self, bins, threshold):
         road_map = torch.zeros((800, 800))
         idx = 0
-        for x in range(0, 800, VERT_BLOCK_SIZE):
-            for y in range(0, 800, HORIZ_BLOCK_SIZE):
-                road_map[x:x+VERT_BLOCK_SIZE, y:y+HORIZ_BLOCK_SIZE] = bins[idx]
+        for x in range(0, 800, 10):
+            for y in range(0, 800, 10):
+                road_map[x:x+10, y:y+10] = bins[idx]
                 idx += 1
         return road_map > threshold
 
@@ -162,7 +199,7 @@ class ModelLoader():
         
             return top_left, width, height
         
-    def get_bboxes(recon_map):
+    def get_bboxes(self, recon_map):
         bb_map = recon_map.clone()
 
         score_threshold = 0
@@ -171,19 +208,19 @@ class ModelLoader():
             for c in range(0, 800, 10):
 
                 top_left = (r, c)
-                width = HORIZ_BLOCK_SIZE
-                height = VERT_BLOCK_SIZE
+                width = 10
+                height = 10
 
-                block = bb_map[r:r+VERT_BLOCK_SIZE, c:c+HORIZ_BLOCK_SIZE]
+                block = bb_map[r:r+10, c:c+10]
                 score = torch.sum(block).item()
                 # If more than have the pixels are 1, classify as bbox car
-                if score > (BLOCK_AREA) * score_threshold:
-                    top_left, width, height = go('right', top_left, width, height, bb_map)
-                    top_left, width, height = go('left', top_left, width, height, bb_map)
-                    top_left, width, height = go('up', top_left, width, height, bb_map)
-                    top_left, width, height = go('down', top_left, width, height, bb_map)
-                    top_left, width, height = go('left', top_left, width, height, bb_map)
-                    top_left, width, height = go('right', top_left, width, height, bb_map)
+                if score > (100) * score_threshold:
+                    top_left, width, height = self.go('right', top_left, width, height, bb_map)
+                    top_left, width, height = self.go('left', top_left, width, height, bb_map)
+                    top_left, width, height = self.go('up', top_left, width, height, bb_map)
+                    top_left, width, height = self.go('down', top_left, width, height, bb_map)
+                    top_left, width, height = self.go('left', top_left, width, height, bb_map)
+                    top_left, width, height = self.go('right', top_left, width, height, bb_map)
 
                     bboxes.append((top_left, width, height))
                     bb_map[top_left[0]:top_left[0] + height, top_left[1]:top_left[1] + width] = 0  
@@ -206,6 +243,8 @@ class ModelLoader():
                     new_bboxes.append(x)
 
         bboxes = new_bboxes
+        
+        
 
         return bboxes
  
@@ -213,8 +252,7 @@ class ModelLoader():
         # samples is a cuda tensor with size [batch_size, 6, 3, 256, 306]
         # You need to return a cuda tensor with size [batch_size, 800, 800]
         road_maps = []
-        self.model.eval()
-        y_hat, y_count, segmentation = self.model(samples)
+        segmentation = self.segmentation_model(samples)
         for seg in segmentation:
             road_map = self.faster_reconstruct_from_bins(seg, 5, 0.4)
             road_maps.append(road_map)

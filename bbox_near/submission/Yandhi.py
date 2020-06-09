@@ -18,26 +18,16 @@ class Segmentation(nn.Module):
         
         self.encoder = torchvision.models.resnet50()
         self.encoder.fc = nn.Identity()
-        self.concat_dim = 180 * 6
+        self.concat_dim = 200 * 6
         
         self.compress = nn.Sequential(OrderedDict([
-            ('linear0', nn.Linear(2048, 180)),
+            ('linear0', nn.Linear(2048, 200)),
             ('drop', nn.Dropout(p = 0.5)),
             ('relu', nn.ReLU()),
         ]))
         
         self.classification = nn.Sequential(OrderedDict([
             ('linear1', nn.Linear(self.concat_dim, 256)),
-        ]))
-        
-        self.x_offset = nn.Sequential(OrderedDict([
-            ('xoff1', nn.Linear(self.concat_dim, 256)),
-            ('tanh1', nn.Tanh())
-        ]))
-        
-        self.y_offset = nn.Sequential(OrderedDict([
-            ('yoff1', nn.Linear(self.concat_dim, 256)),
-            ('tanh2', nn.Tanh())
         ]))
         
         self.counts = nn.Sequential(OrderedDict([
