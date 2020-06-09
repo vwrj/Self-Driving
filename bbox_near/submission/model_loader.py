@@ -5,7 +5,7 @@ import torch
 
 # import your model class
 # import ...
-from Yandhi import Yandhi
+from Yandhi import Yandhi, Segmentation
 
 # Put your transform function here, we will use it for our dataloader
 # For bounding boxes task
@@ -23,13 +23,14 @@ class ModelLoader():
     team_member = ['vish', 'ben', 'tony']
     contact_email = 'brs426@nyu.edu'
 
-    def __init__(self, fl_path = ):
+    def __init__(self, fl_path =):
         # You should
         #       1. create the model object
         #       2. load your state_dict
         #       3. call cuda()
         # self.model = ...
         #
+        
         self.model = Yandhi.Yandhi()
         self.model.load_state_dict(torch.load(model_file_1))
         self.model.cuda()
