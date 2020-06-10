@@ -2,6 +2,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 import torchvision
 import torch
+import pdb
 
 # import your model class
 # import ...
@@ -54,6 +55,13 @@ class ModelLoader():
         
     def get_bounding_boxes(self, sample):
         
+        self.fl_model.eval()
+        self.f_model.eval()
+        self.fr_model.eval()
+        self.bl_model.eval()
+        self.b_model.eval()
+        self.br_model.eval()
+        
         fl_vehicle, _ = self.fl_model(sample[0][0][:, 130:, :].unsqueeze(0))
         f_vehicle, _ = self.f_model(sample[0][1][:, 130:, :].unsqueeze(0))
         fr_vehicle, _ = self.fr_model(sample[0][2][:, 120:, :].unsqueeze(0))
@@ -68,12 +76,12 @@ class ModelLoader():
         b_pred_map = torch.sigmoid(b_vehicle[0])
         br_pred_map = torch.sigmoid(br_vehicle[0])
 
-        reconstruct_fl_map = self.reconstruct_from_bins(fl_pred_map, 0.35).cpu()
-        reconstruct_f_map = self.reconstruct_from_bins(f_pred_map, 0.4).cpu()
-        reconstruct_fr_map = self.reconstruct_from_bins(fr_pred_map, 0.2).cpu()
-        reconstruct_bl_map = self.reconstruct_from_bins(bl_pred_map, 0.3).cpu()
-        reconstruct_b_map = self.reconstruct_from_bins(b_pred_map, 0.35).cpu()
-        reconstruct_br_map = self.reconstruct_from_bins(br_pred_map, 0.6).cpu()
+        reconstruct_fl_map = self.faster_reconstruct_from_bins(fl_pred_map, 10, 0.35).squeeze().cpu()
+        reconstruct_f_map = self.faster_reconstruct_from_bins(f_pred_map, 10, 0.4).squeeze().cpu()
+        reconstruct_fr_map = self.faster_reconstruct_from_bins(fr_pred_map, 10, 0.2).squeeze().cpu()
+        reconstruct_bl_map = self.faster_reconstruct_from_bins(bl_pred_map, 10, 0.3).squeeze().cpu()
+        reconstruct_b_map = self.faster_reconstruct_from_bins(b_pred_map, 10, 0.35).squeeze().cpu()
+        reconstruct_br_map = self.faster_reconstruct_from_bins(br_pred_map, 10, 0.6).squeeze().cpu()
 
         reconstruct_front_map = reconstruct_fl_map + reconstruct_f_map + reconstruct_fr_map
         reconstruct_back_map = reconstruct_bl_map + reconstruct_b_map + reconstruct_br_map
